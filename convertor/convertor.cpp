@@ -20,8 +20,8 @@ int main()
 	using namespace std;
 
 	Stack<char> S;
-	int base = 2;
 	int n = 0;
+	int base = 2;
 
 	cout << "Input the decimal number to be converted:";
 	cin >> n;
