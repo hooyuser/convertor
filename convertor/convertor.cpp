@@ -1,6 +1,5 @@
 #include "stack.h"
 #include <iostream>
-#include <string>
 
 void convert(Stack<char>& S, __int64 n, int base)  //十进制数n到base进制的转换（迭代版）
 {
