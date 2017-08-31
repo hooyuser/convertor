@@ -297,9 +297,9 @@ void Vector<T>::expand()  //向量空间不足时扩容
 template <typename T>
 void Vector<T>::shrink() //装填因子过小时压缩向量所占空间 
 {
-	if (_capacity < DEFAULT_CAPACITY << 1)
+	if (_capacity >> 1 < DEFAULT_CAPACITY)
 		return; //不致收缩到 DEFAULT_CAPACITY 以下
-	if (_size * MIN_OCCUPANCY > _capacity)
+	if (_size > _capacity * MIN_OCCUPANCY)
 		return; //以MIN_OCCUPANCY为下界
 	T* oldElem = _elem;
 	_elem = new T[_capacity >>= 1]; //容量减半
