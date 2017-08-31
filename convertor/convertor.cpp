@@ -28,6 +28,7 @@ int main()
 	cout << "Input the base:";
 	cin >> base;
 	convert(S, n, base);
+	cout << "The convertion result:";
 	while (!S.empty())
 		cout << S.pop();
 
